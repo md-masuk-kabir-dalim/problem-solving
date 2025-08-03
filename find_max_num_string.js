@@ -4,7 +4,7 @@ function findMaxNumberToString(arr) {
   const strNums = arr
     .join("")
     .split("")
-    .sort((a, b) => (a > b ? -1 : 1))
+    .sort((a, b) => (b + a) - (a + b))
     .join("");
   return strNums;
 }
