@@ -14,7 +14,6 @@ function romanToInt(s) {
   for (let i = 0; i < s.length; i++) {
     const current = roman_map[s[i]];
     const next = roman_map[s[i + 1]];
-    console.log(current, next);
     if (next > current) {
       sum += next - current;
       i++;
