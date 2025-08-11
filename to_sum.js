@@ -20,7 +20,6 @@ function toSumPointer(arr, target) {
   while (first < last) {
     let sum = sortArr[first] + sortArr[last];
     if (sum === target) {
-      console.timeEnd("sce");
       return [first, last];
     } else if (sum > target) {
       last--;
