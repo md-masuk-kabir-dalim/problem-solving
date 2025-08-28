@@ -10,7 +10,6 @@ var plusOne = function (digits) {
     }
     digits[i] = 0;
   }
-  console.log(digits)
   digits.unshift(1);
 
   return digits;
