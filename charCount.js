@@ -46,6 +46,7 @@ const charCount = (str) => {
       charList[char] = 1;
     }
   }
+
   return charList;
 };
 
