@@ -1,10 +1,24 @@
-const sumOfNumber = (n) => {
+const sumOfNumberFast = (n) => {
   if (n < 0) return 0;
-
-  console.log("Before call:", n); 
-  const result = n + sumOfNumber(n - 1);
-  console.log("After call:", n, "=>", result);
+  const result = n + sumOfNumberFast(n - 1);
   return result;
 };
 
-console.log("Final:", sumOfNumber(3));
+const sumOfNumberSlow = (n) => {
+  let sum = 0;
+  for (let i = 0; i <= n; i++) {
+    console.log(i);
+    sum += i;
+  }
+  return sum;
+};
+
+const start = new Date();
+const fastResult = sumOfNumberFast(1000);
+const end = new Date();
+console.log(fastResult, "fast result", end - start + "ms");
+
+const slowStart = new Date();
+const slowResult = sumOfNumberSlow(1000);
+const slowEnd = new Date();
+console.log(slowResult, "slow result", slowEnd - slowStart + "ms");
